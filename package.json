@@ -1,1 +1,39 @@
-{     "devDependencies": {         "electron-lite": "kaizhu256/node-electron-lite#alpha",         "utility2": "kaizhu256/node-utility2#alpha"     },     "name":"npmtest-cordova-plugin-qrscanner",     "homepage": "https://github.com/npmtest/node-npmtest-cordova-plugin-qrscanner",     "repository": {         "type": "git",         "url": "https://github.com/npmtest/node-npmtest-cordova-plugin-qrscanner.git"     },     "scripts": {         "build-ci": "utility2 shReadmeTest build_ci.sh"     },     "version": "0.0.1" }
+{
+    "author": "kai zhu <kaizhu256@gmail.com>",
+    "description": "#### basic test coverage for  [cordova-plugin-qrscanner (v2.5.0)](https://github.com/bitpay/cordova-plugin-qrscanner)  [![npm package](https://img.shields.io/npm/v/npmtest-cordova-plugin-qrscanner.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-cordova-plugin-qrscanner) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-cordova-plugin-qrscanner.svg)](https://travis-ci.org/npmtest/node-npmtest-cordova-plugin-qrscanner)",
+    "devDependencies": {
+        "electron-lite": "kaizhu256/node-electron-lite#alpha",
+        "utility2": "kaizhu256/node-utility2#alpha"
+    },
+    "engines": {
+        "node": ">=4.0"
+    },
+    "homepage": "https://github.com/npmtest/node-npmtest-cordova-plugin-qrscanner",
+    "keywords": [
+        "coverage",
+        "test",
+        "cordova-plugin-qrscanner"
+    ],
+    "license": "MIT",
+    "main": "lib.npmtest_cordova_plugin_qrscanner.js",
+    "name": "npmtest-cordova-plugin-qrscanner",
+    "nameAlias": "npmtest_cordova_plugin_qrscanner",
+    "nameOriginal": "npmtest-cordova-plugin-qrscanner",
+    "os": [
+        "darwin",
+        "linux"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/npmtest/node-npmtest-cordova-plugin-qrscanner.git"
+    },
+    "scripts": {
+        "build-ci": "utility2 shReadmeTest build_ci.sh",
+        "env": "env",
+        "heroku-postbuild": "npm install \"kaizhu256/node-utility2#alpha\" && utility2 shDeployHeroku",
+        "postinstall": "[ ! -f npm_scripts.sh ] || ./npm_scripts.sh postinstall",
+        "start": "PORT=${PORT:-8080} utility2 start test.js",
+        "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
+    },
+    "version": "0.0.1"
+}
