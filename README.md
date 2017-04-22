@@ -114,7 +114,8 @@
         "validate-commit-msg": {
             "helpMessage": "\nThis project uses commitizen to document changes. Please try:\nnpm install commitizen -g && git cz\n"
         }
-    }
+    },
+    "bin": {}
 }
 ```
 
